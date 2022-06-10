@@ -1,0 +1,6 @@
+-   id: detect-aws-secrets
+    name: detect aws secrets
+    description: detects *any* aws secrets being committed.
+    entry: detect_aws_secrets
+    language: python
+    types: [text]

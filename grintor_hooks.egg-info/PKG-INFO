@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: grintor-hooks
+Version: 0.0.1
+Summary: Some pre-commit hooks
+Home-page: https://github.com/grintor/grintor-hooks
+Author: Chris Wheeler
+Author-email: grintor@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+grintor-hooks
+================
+
+Some hooks for pre-commit.
+
+See also: https://github.com/pre-commit/pre-commit
+
+
+### Using pre-commit-hooks with pre-commit
+
+Add this to your `.pre-commit-config.yaml`
+
+```yaml
+-   repo: https://github.com/grintor/pre-commit-hooks
+    rev: v0.0.1
+    hooks:
+    -   id: detect-aws-credentials
+    # -   id: ...
+```
+
+### Hooks available
+
+#### `detect-aws-credentials`
+Checks for the existence of any AWS secrets.
+
+

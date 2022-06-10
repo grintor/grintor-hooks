@@ -1,0 +1,5 @@
+-   repo: https://github.com/grintor/pre-commit-hooks
+    rev: v0.0.1
+    hooks:
+    -   id: detect-aws-credentials
+    # -   id: ...

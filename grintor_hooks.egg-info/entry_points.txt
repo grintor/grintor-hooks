@@ -1,3 +1,0 @@
-[console_scripts]
-detect_aws_secrets = grintor_hooks.detect_aws_secrets:main
-

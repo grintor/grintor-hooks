@@ -14,11 +14,11 @@ Add this to your `.pre-commit-config.yaml`
 -   repo: https://github.com/grintor/pre-commit-hooks
     rev: v0.0.1
     hooks:
-    -   id: detect-aws-credentials
+    -   id: detect-aws-secrets
     # -   id: ...
 ```
 
 ### Hooks available
 
-#### `detect-aws-credentials`
+#### `detect-aws-secrets`
 Checks for the existence of any AWS secrets.

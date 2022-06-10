@@ -1,4 +1,4 @@
-pre-commit-hooks
+grintor-hooks
 ================
 
 Some hooks for pre-commit.

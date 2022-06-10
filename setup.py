@@ -38,5 +38,6 @@ setup(
             ]
     },
     include_package_data=False,
+    py_modules=["grintor_hooks"],
     install_requires=[],
 )

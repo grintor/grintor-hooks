@@ -1,13 +1,13 @@
 -   id: detect-aws-secrets
     name: detect aws secrets
-    description: detects *any* aws secrets being committed.
+    description: Checks for the existence of any AWS secrets
     entry: detect_aws_secrets
     language: python
     types: [text]
 
 -   id: detect-missing-requirements
     name: detect missing requirements
-    description: detects python requirements used but not included in requirements.txt
+    description: Detects python requirements used but not included in requirements.txt
     entry: detect_missing_requirements
     language: python
     types: [python]

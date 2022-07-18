@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/grintor/pre-commit-hooks
-    rev: v0.0.1
+    rev: v0.0.2
     hooks:
     -   id: detect-aws-secrets
-    # -   id: ...
+    -   id: detect-missing-requirements

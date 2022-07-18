@@ -4,3 +4,10 @@
     entry: detect_aws_secrets
     language: python
     types: [text]
+
+-   id: detect-missing-requirements
+    name: detect missing requirements
+    description: detects python requirements used but not included in requirements.txt
+    entry: detect_missing_requirements
+    language: python
+    types: [python]

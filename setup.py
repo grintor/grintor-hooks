@@ -27,6 +27,7 @@ setup(
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
@@ -35,9 +36,10 @@ setup(
     entry_points={
             'console_scripts': [
                     'detect_aws_secrets=grintor_hooks.detect_aws_secrets:main',
+                    'detect_missing_requirements=grintor_hooks.detect_missing_requirements:main'
             ]
     },
     include_package_data=False,
     packages=["grintor_hooks"],
-    install_requires=[],
+    install_requires=["pip_api", "isort"],
 )

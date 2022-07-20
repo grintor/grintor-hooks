@@ -41,5 +41,5 @@ setup(
     },
     include_package_data=False,
     packages=["grintor_hooks"],
-    install_requires=["pip_api", "isort", "importlib_metadata"],
+    install_requires=[],
 )

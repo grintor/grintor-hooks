@@ -5,9 +5,11 @@ import types
 
 import pip_api # pip install pip_api
 import isort.stdlibs # pip install isort
-
+import importlib_metadata # pip install isort
 
 def main():
+    packages_distributions = importlib_metadata.packages_distributions()
+
     all_imports = {}
     for filename in sys.argv[1:]:
         for key, val in find_imports(filename).items():
@@ -20,9 +22,11 @@ def main():
         if os.path.exists(requirements_file):
             requirements = pip_api.parse_requirements(requirements_file).keys()
             for external_import in external_imports:
-                if external_import not in requirements:
+                package = packages_distributions.get(external_import, [None])[0]
+                if package and package not in requirements:
                     missing_external_import = {
-                        "name": external_import,
+                        "package": package,
+                        "module": external_import,
                         "line": all_imports[external_import]["line"],
                         "file": all_imports[external_import]["file"],
                         "requirements_file": requirements_file,
@@ -33,7 +37,7 @@ def main():
 
     if missing_external_imports:
         for imp in missing_external_imports:
-            print(f'File "{imp.file}", line {imp.line}: "{imp.name}" not found in {imp.requirements_file}')
+            print(f'{imp.file}:{imp.line}, imported "{imp.module}": {imp.requirements_file} missing "{imp.package}"')
         sys.exit(2)
 
 
